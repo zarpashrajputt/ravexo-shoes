@@ -26,54 +26,6 @@ footer {
   color: #efd39b !important;
 }
 
-/* Keep the cart icon and its count together in the navbar. */
-.cart-link {
-  /* Allow the count badge to be positioned inside the link. */
-  position: relative;
-  /* Put the icon in a row. */
-  display: inline-flex;
-  /* Center the icon vertically. */
-  align-items: center;
-  /* Leave room for the count badge. */
-  padding-right: 12px !important;
-}
-
-/* Set the size of the shopping cart icon. */
-.cart-icon {
-  /* Make the cart icon bigger. */
-  font-size: 24px;
-  /* Keep the icon line height small. */
-  line-height: 1;
-}
-
-/* Show the number of products in a small gold badge. */
-.cart-count {
-  /* Place the badge at the top right of the icon. */
-  position: absolute;
-  /* Set the top position. */
-  top: 0;
-  /* Set the right position. */
-  right: 0;
-  /* Set the minimum badge width. */
-  min-width: 17px;
-  /* Set the badge height. */
-  height: 17px;
-  /* Add space around the number. */
-  padding: 1px 4px;
-  /* Make the badge round. */
-  border-radius: 50%;
-  /* Set the badge background color. */
-  background-color: #efd39b;
-  /* Set the badge text color. */
-  color: #063b3b;
-  /* Set a small number font. */
-  font-size: 11px;
-  /* Center the number vertically. */
-  line-height: 15px;
-  /* Center the number horizontally. */
-  text-align: center;
-}
-
 /* Set the logo size and add a gold circular border. */
 .navbar-logo {
   /* Set logo width. */

@@ -11,9 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Find the root div in index.html and render the App inside it.
 createRoot(document.getElementById('root')).render(
-  // Enable React StrictMode while developing.
   <StrictMode>
-    // Display the main App component.
     <App />
   </StrictMode>,
 )

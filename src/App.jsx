@@ -1,7 +1,5 @@
 // Import the CSS file used to style this page.
 import './App.css';
-// Import useState to store the number of products added to the cart.
-import { useState } from 'react';
 // Import the first logo image from the src folder.
 import logo from './logo.jpeg';
 // Import the second logo image for the carousel.
@@ -15,14 +13,6 @@ import shoe5 from './shoe 5.jpeg';
 
 // This function creates and displays the complete landing page.
 function App() {
-  // Store the current number of products in the cart.
-  const [cartCount, setCartCount] = useState(0);
-
-  // Increase the cart count when a product is added.
-  const addToCart = () => {
-    setCartCount(cartCount + 1);
-  };
-
   // Return contains all HTML-like JSX shown in the browser.
   return (
     // Fragment lets us return multiple main sections without an extra div.
@@ -72,19 +62,6 @@ function App() {
               {/* Add the Contact link. */}
               <li className="nav-item">
                 <a className="nav-link" href="#contact">Contact</a>
-              </li>
-              {/* Cart icon shows the number of added products. */}
-              <li className="nav-item">
-                <a
-                  className="nav-link cart-link"
-                  href="#cart"
-                  aria-label={`Shopping cart with ${cartCount} items`}
-                >
-                  {/* Show the shopping cart symbol. */}
-                  <span className="cart-icon" aria-hidden="true">&#128722;</span>
-                  {/* Show the number of cart items. */}
-                  <span className="cart-count">{cartCount}</span>
-                </a>
               </li>
             </ul>
           </div>
@@ -180,14 +157,6 @@ function App() {
                     <br />
                     Size: EUR 42
                   </p>
-                  {/* Add the first product to the cart. */}
-                  <button
-                    type="button"
-                    className="btn btn-primary me-2"
-                    onClick={addToCart}
-                  >
-                    Add to Cart
-                  </button>
                   {/* Link to the contact section for buying. */}
                   <a href="#contact" className="btn btn-primary">
                     Buy Now
@@ -215,14 +184,6 @@ function App() {
                     <br />
                     Size: EUR 43
                   </p>
-                  {/* Add the second product to the cart. */}
-                  <button
-                    type="button"
-                    className="btn btn-primary me-2"
-                    onClick={addToCart}
-                  >
-                    Add to Cart
-                  </button>
                   {/* Link to the contact section for buying. */}
                   <a href="#contact" className="btn btn-primary">
                     Buy Now
@@ -250,14 +211,6 @@ function App() {
                     <br />
                     Size: EUR 40
                   </p>
-                  {/* Add the third product to the cart. */}
-                  <button
-                    type="button"
-                    className="btn btn-primary me-2"
-                    onClick={addToCart}
-                  >
-                    Add to Cart
-                  </button>
                   {/* Link to the contact section for buying. */}
                   <a href="#contact" className="btn btn-primary">
                     Buy Now
