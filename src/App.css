@@ -1,0 +1,141 @@
+/* Set the main page background and text colors. */
+body {
+  /* Use the cream color for the page background. */
+  background-color: #f7f3eb !important;
+  /* Use dark green for normal text. */
+  color: #063b3b;
+}
+
+/* Make the About section cream instead of Bootstrap light white. */
+.bg-light {
+  /* Match the page cream background. */
+  background-color: #f7f3eb !important;
+}
+
+/* Give the navbar and footer the dark green color. */
+.navbar,
+footer {
+  /* Set the dark green background. */
+  background-color: #063b3b !important;
+}
+
+/* Give the brand name and navigation links the gold color. */
+.navbar-brand,
+.nav-link {
+  /* Set the gold text color. */
+  color: #efd39b !important;
+}
+
+/* Keep the cart icon and its count together in the navbar. */
+.cart-link {
+  /* Allow the count badge to be positioned inside the link. */
+  position: relative;
+  /* Put the icon in a row. */
+  display: inline-flex;
+  /* Center the icon vertically. */
+  align-items: center;
+  /* Leave room for the count badge. */
+  padding-right: 12px !important;
+}
+
+/* Set the size of the shopping cart icon. */
+.cart-icon {
+  /* Make the cart icon bigger. */
+  font-size: 24px;
+  /* Keep the icon line height small. */
+  line-height: 1;
+}
+
+/* Show the number of products in a small gold badge. */
+.cart-count {
+  /* Place the badge at the top right of the icon. */
+  position: absolute;
+  /* Set the top position. */
+  top: 0;
+  /* Set the right position. */
+  right: 0;
+  /* Set the minimum badge width. */
+  min-width: 17px;
+  /* Set the badge height. */
+  height: 17px;
+  /* Add space around the number. */
+  padding: 1px 4px;
+  /* Make the badge round. */
+  border-radius: 50%;
+  /* Set the badge background color. */
+  background-color: #efd39b;
+  /* Set the badge text color. */
+  color: #063b3b;
+  /* Set a small number font. */
+  font-size: 11px;
+  /* Center the number vertically. */
+  line-height: 15px;
+  /* Center the number horizontally. */
+  text-align: center;
+}
+
+/* Set the logo size and add a gold circular border. */
+.navbar-logo {
+  /* Set logo width. */
+  width: 42px;
+  /* Set logo height. */
+  height: 42px;
+  /* Add the gold border. */
+  border: 2px solid #efd39b;
+  /* Make the image round. */
+  border-radius: 50%;
+}
+
+/* Set the height and cropping style of carousel images. */
+.hero-section .carousel img {
+  /* Set the carousel image height. */
+  height: 500px;
+  /* Crop the image without stretching it. */
+  object-fit: cover;
+}
+
+/* Set the normal button colors. */
+.btn-primary {
+  /* Use cream/gold as the button background. */
+  background-color: #efd39b !important;
+  /* Use the same cream/gold color for the border. */
+  border-color: #efd39b !important;
+  /* Use dark green for the button text. */
+  color: #063b3b !important;
+}
+
+/* Keep the button cream when the mouse is over it. */
+.btn-primary:hover {
+  /* Keep the cream/gold background on hover. */
+  background-color: #efd39b !important;
+  /* Keep the cream/gold border on hover. */
+  border-color: #efd39b !important;
+  /* Keep the dark green text on hover. */
+  color: #063b3b !important;
+}
+
+/* Change the button to green while clicking or after focus. */
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  /* Use dark green after clicking. */
+  background-color: #063b3b !important;
+  /* Use dark green for the active border. */
+  border-color: #063b3b !important;
+  /* Use gold text on the green active button. */
+  color: #efd39b !important;
+}
+
+/* Add a gold border around every product card. */
+.card {
+  /* Set the card border width, style, and color. */
+  border: 1px solid #efd39b;
+}
+
+/* Use dark green for product and section headings. */
+.card-title,
+h2,
+h5 {
+  /* Set the heading text color. */
+  color: #063b3b;
+}
