@@ -15,22 +15,22 @@ function FormsDemo() {
   return (
     <div className="container mt-5">
    {/* Admin Forms */}
-      {/* <AdminLoginForm /> */}
-      {/* <AddProductForm /> */}
-      {/* <EditProductForm /> */}
-      {/* <OrderManagementForm /> */}
+      <AdminLoginForm />
+      <AddProductForm />
+      <EditProductForm />
+      <OrderManagementForm />
 
      {/* customer forms */}
-      {/* <SignUpForm /> */}
-      {/* <LoginForm /> */}
-      {/* <ContactForm /> */}
-      {/* <CheckoutForm /> */}
-      {/* <PaymentForm /> */}
+      <SignUpForm />
+      <LoginForm />
+      <ContactForm />
+      <CheckoutForm />
+      <PaymentForm />
       <ReviewForm />
 
     {/* Delivery Rider Forms */}
-      {/* <RiderLoginForm /> */}
-      {/* <DeliveryStatusForm /> */}
+      <RiderLoginForm />
+      <DeliveryStatusForm />
     </div>
   );
 }

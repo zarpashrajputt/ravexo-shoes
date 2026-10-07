@@ -1,5 +1,6 @@
 // Import the CSS file used to style this page.
 import './App.css';
+import { Link } from 'react-router-dom';
 // Import the first logo image from the src folder.
 import logo from './logo.jpeg';
 // Import the second logo image for the carousel.
@@ -22,15 +23,13 @@ function App() {
         {/* Keeps navbar content centered */}
         <div className="container">
           {/* Create the website brand link. */}
-          <a
+          <Link
             className="navbar-brand fw-bold d-flex align-items-center gap-2"
-            href="#"
+            to="/"
           >
-            {/* Show the brand logo. */}
-            <img src={logo} className="navbar-logo" alt="Ravexo.pk logo" />
             {/* Show the brand name. */}
             <span>RAVEXO.PK</span>
-          </a>
+          </Link>
           {/* Create the mobile menu button. */}
           <button
             className="navbar-toggler"
@@ -62,6 +61,15 @@ function App() {
               {/* Add the Contact link. */}
               <li className="nav-item">
                 <a className="nav-link" href="#contact">Contact</a>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/admin">Admin</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/customer">Customer</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/rider">Rider</Link>
               </li>
             </ul>
           </div>

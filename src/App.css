@@ -26,18 +26,6 @@ footer {
   color: #efd39b !important;
 }
 
-/* Set the logo size and add a gold circular border. */
-.navbar-logo {
-  /* Set logo width. */
-  width: 42px;
-  /* Set logo height. */
-  height: 42px;
-  /* Add the gold border. */
-  border: 2px solid #efd39b;
-  /* Make the image round. */
-  border-radius: 50%;
-}
-
 /* Set the height and cropping style of carousel images. */
 .hero-section .carousel img {
   /* Set the carousel image height. */
