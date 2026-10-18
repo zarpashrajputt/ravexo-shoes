@@ -48,19 +48,19 @@ function App() {
             <ul className="navbar-nav ms-auto">
               {/* Add the Home link. */}
               <li className="nav-item">
-                <a className="nav-link" href="#home">Home</a>
+                <Link className="nav-link" to="#home">Home</Link>
               </li>
               {/* Add the Products link. */}
               <li className="nav-item">
-                <a className="nav-link" href="#products">Products</a>
+                <Link className="nav-link" to="#products">Products</Link>
               </li>
               {/* Add the About link. */}
               <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
+                <Link className="nav-link" to="#about">About</Link>
               </li>
               {/* Add the Contact link. */}
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <Link className="nav-link" to="#contact">Contact</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/admin">Admin</Link>
@@ -93,9 +93,9 @@ function App() {
                 Affordable sneakers and casual shoes for every style.
               </p>
               {/* Add a link to the products section. */}
-              <a href="#products" className="btn btn-primary btn-lg">
+              <Link to="#products" className="btn btn-primary btn-lg">
                 Shop Now
-              </a>
+              </Link>
             </div>
             {/* Hero image column */}
             <div className="col-md-6">
@@ -166,9 +166,9 @@ function App() {
                     Size: EUR 42
                   </p>
                   {/* Link to the contact section for buying. */}
-                  <a href="#contact" className="btn btn-primary">
+                  <Link to="#contact" className="btn btn-primary">
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -193,9 +193,9 @@ function App() {
                     Size: EUR 43
                   </p>
                   {/* Link to the contact section for buying. */}
-                  <a href="#contact" className="btn btn-primary">
+                  <Link to="#contact" className="btn btn-primary">
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -212,7 +212,7 @@ function App() {
                 {/* Third product details */}
                 <div className="card-body">
                   {/* Show the third product name. */}
-                  <h5 className="card-title">Black &amp; White High-Top Sneaker</h5>
+                  <h5 className="card-title">Black White High-Top Sneaker</h5>
                   {/* Show the third product price and size. */}
                   <p className="card-text">
                     Price: 3000
@@ -220,9 +220,9 @@ function App() {
                     Size: EUR 40
                   </p>
                   {/* Link to the contact section for buying. */}
-                  <a href="#contact" className="btn btn-primary">
+                  <Link to="#contact" className="btn btn-primary">
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -259,11 +259,11 @@ function App() {
               {/* Show the quick links heading. */}
               <h5>Quick Links</h5>
               {/* Link back to the Home section. */}
-              <a href="#home" className="d-block text-white">Home</a>
+              <Link to="#home" className="d-block text-white">Home</Link>
               {/* Link to the Products section. */}
-              <a href="#products" className="d-block text-white">Products</a>
+              <Link to="#products" className="d-block text-white">Products</Link>
               {/* Link to the About section. */}
-              <a href="#about" className="d-block text-white">About</a>
+              <Link to="#about" className="d-block text-white">About</Link>
             </div>
             {/* Footer contact column */}
             <div className="col-md-4">

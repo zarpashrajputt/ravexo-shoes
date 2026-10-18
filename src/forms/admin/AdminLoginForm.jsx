@@ -1,5 +1,29 @@
+// Import React Hook Form for form registration and submission.
+import { useForm } from "react-hook-form";
+// Import Zod for login field validation.
+import { z } from "zod";
+// Connect Zod validation to React Hook Form.
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// Define validation rules for the admin credentials.
+const adminLoginSchema = z.object({
+  // Require a valid admin email address.
+  adminEmail: z.string().min(1, "Email is required").email("Invalid email"),
+  // Require a password with a minimum length, uppercase letter, and number.
+  adminPassword: z.string().min(1, "Password is required").min(8, "Password must be at least 8 characters").regex(/[A-Z]/, "Password must contain an uppercase letter").regex(/[0-9]/, "Password must contain a number"),
+});
+
 // This component shows the admin login form.
 function AdminLoginForm() {
+  // Connect the admin schema to the login form.
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: zodResolver(adminLoginSchema),
+  });
+  // Log valid login data after submission.
+  function myFormSubmissionFunction(data) {
+    console.log("Form submitted.", data);
+  }
+
   // Return the form's JSX layout.
   return (
     // Add vertical spacing and center the page content.
@@ -17,20 +41,24 @@ function AdminLoginForm() {
               {/* Show the form title. */}
               <h4 className="text-center mb-4">Admin Login</h4>
               {/* Group the admin login fields and button. */}
-              <form>
+              <form onSubmit={handleSubmit(myFormSubmissionFunction)}>
                 {/* Keep the email field in its own spacing block. */}
                 <div className="mb-3">
                   {/* Connect the Email label to its input. */}
                   <label htmlFor="adminEmail" className="form-label">Email</label>
                   {/* Accept an email address and require a value. */}
-                  <input type="email" className="form-control form-control-lg" id="adminEmail" required />
+                  <input type="email" className="form-control form-control-lg" id="adminEmail" {...register("adminEmail")} />
+                  {/* Display validation feedback for the email. */}
+                  {errors.adminEmail && <span className="text-danger">{errors.adminEmail.message}</span>}
                 </div>{/* Close the email field block. */}
                 {/* Keep the password field in its own spacing block. */}
                 <div className="mb-3">
                   {/* Connect the Password label to its input. */}
                   <label htmlFor="adminPassword" className="form-label">Password</label>
                   {/* Hide the password while it is being entered. */}
-                  <input type="password" className="form-control form-control-lg" id="adminPassword" required />
+                  <input type="password" className="form-control form-control-lg" id="adminPassword" {...register("adminPassword")} />
+                  {/* Display validation feedback for the password. */}
+                  {errors.adminPassword && <span className="text-danger">{errors.adminPassword.message}</span>}
                 </div>{/* Close the password field block. */}
                 {/* Submit the login form with the existing Ravexo button colors. */}
                 <button type="submit" className="btn btn-lg w-100" style={{ backgroundColor: '#063b3b', borderColor: '#063b3b', color: '#efd39b' }}>Login</button>
